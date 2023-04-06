@@ -1,0 +1,35 @@
+
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.search-bar input{
+    width: 35%;
+    height: 4rem;
+    background-color: transparent;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: var(--box-shadow);
+    padding: 0rem 2rem;
+    caret-color:  var(--color-green) ;
+    font-size: 1.5rem;
+    color: var(--color-green);
+}
+.search-bar button{
+    width: 4.5rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: var(--box-shadow);
+    color: var(--color-blue);
+    font-weight: bold;
+}
+

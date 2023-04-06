@@ -1,0 +1,18 @@
+
+.box{
+    background-color: transparent;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #fff ;
+    padding: .5rem;
+}
+.box .box-icon{
+    color: var(--color-green);
+    font-size: 1.7rem;
+}
+.box p{
+    font-size: 1.4rem;
+    color: var(--color-blue);
+}
+.box h6{
+    font-size: 1.7rem;
+}
