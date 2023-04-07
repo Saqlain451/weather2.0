@@ -4,15 +4,20 @@
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #fff ;
     padding: .5rem;
+    text-align: left;
 }
 .box .box-icon{
     color: var(--color-green);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    font-weight: 800;
 }
 .box p{
     font-size: 1.4rem;
     color: var(--color-blue);
+    text-transform: capitalize;
 }
 .box h6{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
 }

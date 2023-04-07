@@ -4,7 +4,7 @@
     background-color: transparent;
     box-shadow: var(--box-shadow);
     border-radius: .7rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem 2rem 1rem;
     text-align: center;
 }
 
@@ -12,33 +12,30 @@
     font-size: 2.5rem;
 }
 
-.card .card-location{
-    display: flex;
-    font-size: 3rem;
-    color: var(--color-green);
-    text-transform: capitalize;
-    align-items: center;
-}
-
-.card .card-location span{
-    font-size: 2rem;
-    color: var(--color-blue);
-}
-
 .card .card-description{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
 }
+
+
 
 .card-description span{
     font-size: 7rem;
     color: var(--color-green);
 }
 
-.card-description p{
-    font-size: 2rem;
+.card-description .des{
+    font-size: 1.7rem;
     color: var(--color-blue);
+    display: grid;
+}
+
+.des span{
+    font-size: 1.6rem;
+    color: black;
 }
 
 .box-wrapper{
