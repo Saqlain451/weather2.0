@@ -19,6 +19,7 @@ const AppProvider = ({ children }) => {
     const [curData, setCurData] = useState({})
     const [dailyData, setDailyData] = useState([]);
     const [hourData, setHourData] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
 
     const changeHandler = (e) => {
@@ -35,11 +36,7 @@ const AppProvider = ({ children }) => {
         try {
             const res = await fetch(api, options);
             const data = await res.json();
-            console.log(data.forecast[0]);
-            const { symbolPhrase, maxFeelsLikeTemp, maxTemp, maxRelHumidity, maxWindSpeed, minVisibility, sunrise, sunset } = data.forecast[0]
-            const datas = { symbolPhrase, maxFeelsLikeTemp, maxTemp, maxRelHumidity, maxWindSpeed, minVisibility, sunrise, sunset }
-            setCurData({ ...datas })
-            console.log(symbolPhrase)
+            setCurData({ ...data.forecast[0]})
             setDailyData(data.forecast)
         } catch (err) {
             console.log(err)
@@ -55,10 +52,12 @@ const AppProvider = ({ children }) => {
     }
 
     const getCityId = async (api) => {
+        setIsLoading(true);
         const res = await fetch(api, options);
         const data = await res.json();
         setError(false);
         try {
+            data? setIsLoading(false) : setIsLoading(true);
             getWeatherData(`${url}/daily/${data.locations[0].id}?alt=0&tempunit=C&windunit=MS&periods=8&dataset=full`)
             getHourlyData(`${url}/3hourly/${data.locations[0].id}?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&periods=8&dataset=full&history=0`)
 
@@ -76,7 +75,7 @@ const AppProvider = ({ children }) => {
     }, [subcity])
 
 
-    return (<appContext.Provider value={{ dailyData, hourData, changeHandler, cityId, subcity, clickHandler, curData,error }}>
+    return (<appContext.Provider value={{ dailyData, hourData, changeHandler, cityId, subcity, clickHandler, curData, error, isLoading }}>
         {children}
     </appContext.Provider>)
 }

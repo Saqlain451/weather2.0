@@ -1,11 +1,12 @@
 import React from 'react'
 import "./box.css"
-const Box = ({icon, text, value}) => {
+const Box = ({icon, text, value,dayname,icon2}) => {
   return (
     <>
         <div className="box">
-            <span className='box-icon'>
-                {icon}
+            <strong>{dayname}</strong>
+            <br />
+            <span className='box-icon'>{icon}
             </span>
             <p>{text}</p>
             <h6>{value}</h6>

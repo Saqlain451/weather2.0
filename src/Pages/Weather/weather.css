@@ -3,3 +3,28 @@
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
 }
+
+.card-wrapper .card-parents{
+    display: grid;
+    grid-gap: 2rem;
+}
+.card-parents .forecast{
+    box-shadow: var(--box-shadow);
+    background-color: transparent;
+    border-radius: .7rem;
+    display: grid;
+    place-items: center;
+}
+
+.card-parents .forecast h5{
+    font-size: 2rem;
+    color: var(--color-green);
+    text-transform: capitalize;
+}
+
+.forecast-details{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}

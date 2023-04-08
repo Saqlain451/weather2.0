@@ -5,6 +5,12 @@
     box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #fff ;
     padding: .5rem;
     text-align: left;
+    width: 100%;
+}
+.box strong{
+    text-transform: capitalize;
+    color: var(--color-green);
+    font-size: 1.5rem;
 }
 .box .box-icon{
     color: var(--color-green);
