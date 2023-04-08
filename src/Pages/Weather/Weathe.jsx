@@ -61,10 +61,10 @@ const Weathe = () => {
                 <h5>hourly forecaste</h5>
                   <div className="forecast-details">
                 {hourData.map((ele) => {
-                    console.log(ele)
+                    // console.log(ele)
                     const{feelsLikeTemp,time,} = ele;
                     return(
-                      <Box dayname={getHour(time) } value={`${feelsLikeTemp} °C`} />
+                      <Box dayname={getHour(time) } value={`${feelsLikeTemp} °C`} key={time} />
                     )
                   })}
                   </div>

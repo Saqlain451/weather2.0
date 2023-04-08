@@ -2,13 +2,16 @@ import React, { useContext, useEffect, useState } from 'react'
 
 const appContext = React.createContext();
 
+
 const AppProvider = ({ children }) => {
+
+    console.log("data from env"+ JSON.stringify (import.meta.env.VITE_API_KEY));
 
 
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '388b0e83cemsh1596acda609c0f0p17852cjsn33fcb32843b3',
+            'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
             'X-RapidAPI-Host': 'foreca-weather.p.rapidapi.com'
         }
     };
